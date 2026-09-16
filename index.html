@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TBG Gaming 9 — modern Free Fire gaming and esports tournaments.">
+  <title>TBG Gaming 9 | Esports</title>
+  <style>
+    :root{
+      --bg:#07050d; --panel:#110c1c; --purple:#8b2cff; --purple2:#c15cff;
+      --text:#f7f2ff; --muted:#b8aec5; --line:rgba(180,90,255,.22);
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:
+      radial-gradient(circle at 80% 10%,rgba(139,44,255,.22),transparent 30%),
+      radial-gradient(circle at 10% 70%,rgba(193,92,255,.12),transparent 28%),var(--bg);
+      color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(7,5,13,.82);
+      backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav-inner{max-width:1150px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:900;font-size:21px;letter-spacing:1px}.logo span{color:var(--purple2)}
+    .links{display:flex;gap:25px;color:#ddd}.links a:hover{color:var(--purple2)}
+    .menu{display:none;background:none;border:0;color:white;font-size:25px}
+    .hero{min-height:100vh;display:grid;place-items:center;padding:120px 22px 70px;text-align:center}
+    .hero-box{max-width:900px}
+    .badge{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:999px;color:#d8b5ff;background:rgba(139,44,255,.09);font-size:13px;font-weight:bold}
+    h1{font-size:clamp(48px,9vw,92px);line-height:.95;margin:22px 0 18px;letter-spacing:-3px}
+    h1 span{color:var(--purple2);text-shadow:0 0 35px rgba(139,44,255,.5)}
+    .hero p{max-width:650px;margin:auto;color:var(--muted);font-size:18px}
+    .buttons{margin-top:30px;display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+    .btn{padding:13px 22px;border-radius:10px;font-weight:800;border:1px solid var(--line);transition:.2s}
+    .primary{background:linear-gradient(135deg,var(--purple),var(--purple2));color:#fff;box-shadow:0 8px 35px rgba(139,44,255,.28)}
+    .secondary{background:#100b18;color:#eee}.btn:hover{transform:translateY(-2px)}
+    section{max-width:1150px;margin:auto;padding:90px 22px}
+    .section-title{text-align:center;margin-bottom:45px}.section-title h2{font-size:38px;margin:0 0 8px}
+    .section-title p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(145deg,rgba(24,15,36,.95),rgba(10,7,15,.95));border:1px solid var(--line);
+      border-radius:18px;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,.2)}
+    .icon{font-size:32px}.card h3{margin:14px 0 7px}.card p{color:var(--muted);margin:0}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about h2{font-size:42px;line-height:1.1;margin:0 0 15px}.about p{color:var(--muted)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stat{padding:22px;border-radius:15px;background:#100b18;border:1px solid var(--line)}
+    .stat strong{display:block;font-size:30px;color:var(--purple2)}
+    .tournament{background:linear-gradient(135deg,rgba(139,44,255,.16),rgba(17,12,28,.85));border:1px solid var(--line);border-radius:25px;padding:40px}
+    .tour-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.tour-row h2{margin:0;font-size:34px}
+    .pill{padding:8px 13px;border-radius:999px;background:rgba(139,44,255,.17);border:1px solid var(--line);color:#ddbaff}
+    .contact{text-align:center}.socials{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:25px}
+    footer{text-align:center;padding:35px 20px;color:#887e95;border-top:1px solid var(--line);font-size:14px}
+    @media(max-width:760px){
+      .links{display:none}.menu{display:block}.links.open{display:flex;position:absolute;top:64px;left:0;right:0;background:#0a0710;flex-direction:column;padding:20px 25px;gap:15px}
+      .grid,.about{grid-template-columns:1fr}.hero p{font-size:16px}section{padding:70px 18px}
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#home">TBG <span>GAMING 9</span></a>
+    <button class="menu" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <div class="links" id="links">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
+      <a href="#tournament">Tournament</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-box">
+      <span class="badge">FREE FIRE • GAMING • ESPORTS</span>
+      <h1>TBG <span>GAMING 9</span></h1>
+      <p>Play hard. Compete harder. Join a growing gaming community built for tournaments, squads and unforgettable esports moments.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#tournament">View Tournament</a>
+        <a class="btn secondary" href="#contact">Join the Community</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <div>
+        <span class="badge">ABOUT TBG</span>
+        <h2>Built for players who live for the game.</h2>
+        <p>TBG Gaming 9 is a gaming and esports brand focused on competitive Free Fire experiences, community events and exciting tournaments.</p>
+        <p>Whether you're playing with your squad or watching the finals, the goal is simple: create competitive moments worth remembering.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>FREE</strong>Entry-focused events</div>
+        <div class="stat"><strong>FF</strong>Free Fire community</div>
+        <div class="stat"><strong>24/7</strong>Gaming energy</div>
+        <div class="stat"><strong>GG</strong>Good games, always</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-title"><h2>Services</h2><p>Everything you need for competitive gaming events.</p></div>
+    <div class="grid">
+      <div class="card"><div class="icon">🏆</div><h3>Esports Tournaments</h3><p>Organize competitive squad and custom-room gaming tournaments.</p></div>
+      <div class="card"><div class="icon">🎮</div><h3>Gaming Events</h3><p>Community-focused matches designed for players and viewers.</p></div>
+      <div class="card"><div class="icon">📺</div><h3>Live Matches</h3><p>Promote and showcase exciting tournament matches for your audience.</p></div>
+    </div>
+  </section>
+
+  <section id="tournament">
+    <div class="section-title"><h2>Featured Tournament</h2><p>Stay tuned for the next TBG Gaming 9 battle.</p></div>
+    <div class="tournament">
+      <div class="tour-row">
+        <div>
+          <span class="pill">FREE FIRE TOURNAMENT</span>
+          <h2>TBG Gaming 9 Tournament</h2>
+          <p style="color:var(--muted)">Squad matches • Competitive gameplay • Live updates</p>
+        </div>
+        <a class="btn primary" href="https://www.instagram.com/tbg_tournaments?stkn=YXhnYnZwdTd5cWVs" target="_blank" rel="noopener">Tournament Updates</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="section-title"><h2>Contact TBG Gaming 9</h2><p>Follow us for tournament announcements, results and gaming content.</p></div>
+    <div class="socials">
+      <a class="btn primary" href="https://www.instagram.com/tbg_gaming_9_?stkn=Z3AzdHNsZTlzOHd5" target="_blank" rel="noopener">📸 TBG Gaming 9</a>
+      <a class="btn secondary" href="https://www.instagram.com/tbg_tournaments?stkn=YXhnYnZwdTd5cWVs" target="_blank" rel="noopener">🏆 TBG Tournaments</a>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="year"></span> TBG Gaming 9 • Gaming • Esports • Free Fire</footer>
+
+<script>
+  function toggleMenu(){ document.getElementById('links').classList.toggle('open'); }
+  document.querySelectorAll('.links a').forEach(a => a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
